@@ -1,0 +1,41 @@
+# Arquivos do Go
+/bin/
+/tmp/
+/go.sum
+/go.env
+
+# Air (hot reload)
+.air*
+
+# Ambiente e configurações
+.env
+.env.local
+.env.development
+
+# Banco de dados
+*.db
+*.sqlite
+/dbdata/
+
+# Editor/IDE
+.idea/
+.vscode/
+*.swp
+*.swo
+
+# Logs e arquivos temporários
+*.log
+*.tmp
+
+# Binários e builds
+/dist/
+/out/
+*.exe
+
+# Dependências do frontend (se tiver)
+node_modules/
+/static/js/vendor/
+
+# Arquivos do sistema
+.DS_Store
+Thumbs.db
