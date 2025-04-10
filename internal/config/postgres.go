@@ -5,6 +5,7 @@ import (
 	"os"
 
 	"github.com/Ulpio/xuiter.git/internal/models"
+	"github.com/joho/godotenv"
 	"gorm.io/driver/postgres"
 	"gorm.io/gorm"
 )
@@ -12,6 +13,10 @@ import (
 var DB *gorm.DB
 
 func ConnectDB() {
+	err := godotenv.Load()
+	if err != nil {
+		panic("Erro ao carregar o arquivo .env")
+	}
 	dsn := fmt.Sprintf(
 		"host=%s user=%s password=%s dbname=%s port=%s sslmode=disable",
 		os.Getenv("DB_HOST"),
