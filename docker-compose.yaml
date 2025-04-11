@@ -1,7 +1,6 @@
 services:
   db:
     image: postgres:15-alpine
-    container_name: twitter_clone_db
     env_file:
       - .env # Carrega variáveis do arquivo .env
     environment:
